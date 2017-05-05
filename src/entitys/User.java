@@ -8,9 +8,9 @@ public class User {
     private String name;
     private String password;
     private String email;
-    private int userRole;
+    private String userRole;
 
-    public User(long id, String name, String password, String email, int userRole) {
+    public User(long id, String name, String password, String email, String userRole) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -18,7 +18,15 @@ public class User {
         this.userRole = userRole;
     }
 
-    public User(String name, String password, String email, int userRole) {
+
+
+    public User(long id, String name, String userRole) {
+        this.id = id;
+        this.name = name;
+        this.userRole = userRole;
+    }
+
+    public User(String name, String password, String email, String userRole) {
         this.name = name;
         this.password = password;
         this.email = email;
@@ -36,6 +44,11 @@ public class User {
         this.name = name;
         this.password = password;
         this.email = email;
+    }
+
+    public User(long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     @Override
@@ -101,11 +114,11 @@ public class User {
         this.email = email;
     }
 
-    public int getUserRole() {
+    public String getUserRole() {
         return userRole;
     }
 
-    public void setUserRole(int userRole) {
+    public void setUserRole(String userRole) {
         this.userRole = userRole;
     }
 }

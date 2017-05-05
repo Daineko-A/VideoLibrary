@@ -1,5 +1,7 @@
 package servlets;
 
+import services.MovieService;
+
 import javax.jws.WebService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,12 +14,13 @@ import java.io.IOException;
 /**
  * Created by PloSkiY on 17.04.2017.
  */
-@WebServlet("/indexServlet")
-public class indexServlet extends HttpServlet {
+@WebServlet("/index")
+public class IndexServlet extends HttpServlet {
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/indexServlet.jsp");
-        requestDispatcher.forward(req, resp);
+        req.setAttribute("movies", MovieService.getInstance().showAll(0, 20).get());
+        getServletContext().getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(req, resp);
     }
 }

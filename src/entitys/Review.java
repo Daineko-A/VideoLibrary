@@ -9,11 +9,11 @@ public class Review {
     private long id;
     private String text;
     private LocalDate date;
-    private int stars;
+    private long stars;
     private User user;
     private Movie movie;
 
-    public Review(long id, String text, LocalDate date, int stars, User user, Movie movie) {
+    public Review(long id, String text, LocalDate date, long stars, User user, Movie movie) {
         this.id = id;
         this.text = text;
         this.date = date;
@@ -22,9 +22,16 @@ public class Review {
         this.movie = movie;
     }
 
-    public Review(String text, LocalDate date, int stars, User user, Movie movie) {
+    public Review(String text, LocalDate date, long stars, User user, Movie movie) {
         this.text = text;
         this.date = date;
+        this.stars = stars;
+        this.user = user;
+        this.movie = movie;
+    }
+
+    public Review(String text, long stars, User user, Movie movie) {
+        this.text = text;
         this.stars = stars;
         this.user = user;
         this.movie = movie;
@@ -51,18 +58,14 @@ public class Review {
 
         if (stars != review.stars) return false;
         if (!text.equals(review.text)) return false;
-        if (!date.equals(review.date)) return false;
-        if (!user.equals(review.user)) return false;
-        return movie.equals(review.movie);
+        return date.equals(review.date);
     }
 
     @Override
     public int hashCode() {
         int result = text.hashCode();
         result = 31 * result + date.hashCode();
-        result = 31 * result + stars;
-        result = 31 * result + user.hashCode();
-        result = 31 * result + movie.hashCode();
+        result = 31 * result + (int) (stars ^ (stars >>> 32));
         return result;
     }
 
@@ -90,7 +93,7 @@ public class Review {
         this.date = date;
     }
 
-    public int getStars() {
+    public long getStars() {
         return stars;
     }
 

@@ -20,3 +20,10 @@ CREATE TABLE movies_members_roles (movie_id INT NOT NULL, member_id INT NOT NULL
 /*Create review*/
 CREATE TABLE review (id INT AUTO_INCREMENT, text VARCHAR(2000) NOT NULL, date DATE NOT NULL, stars INT NOT NULL, user_id  INT NOT NULL, movie_id INT NOT NULL,
 						PRIMARY KEY(id), FOREIGN KEY(user_id) REFERENCES user(id), FOREIGN KEY(movie_id) REFERENCES movies(id));
+						
+/*first vales*/
+INSERT INTO user_role (role) VALUES ('admin');
+INSERT INTO user_role (role) VALUES ('user');
+INSERT INTO user_role (role) VALUES ('editor');
+
+INSERT INTO user (name, pass, email, user_role_id) VALUES ('admin', 'admin', 'admin@deadline.com', '1');

@@ -6,11 +6,51 @@ import java.time.LocalDate;
  * Created by PloSkiY on 07.04.2017.
  */
 public class MovieMember {
+    private long id;
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth;
     private String role;
 
+    public MovieMember(String firstName, String lastName, LocalDate dateOfBirth) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public MovieMember(long id, String firstName, String lastName, LocalDate dateOfBirth) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public MovieMember(String firstName, String lastName, LocalDate dateOfBirth, String role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.role = role;
+    }
+
+    public MovieMember(long id, String firstName, String lastName, String role) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = role;
+    }
+
+    public MovieMember(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public MovieMember(long id, String firstName, String lastName, LocalDate dateOfBirth, String role) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.role = role;
+    }
 
     @Override
     public String toString() {
@@ -40,6 +80,14 @@ public class MovieMember {
         result = 31 * result + lastName.hashCode();
         result = 31 * result + dateOfBirth.hashCode();
         return result;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
