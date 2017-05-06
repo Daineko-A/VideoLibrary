@@ -6,9 +6,7 @@
 <body>
 
 <div class="wrapper container">
-    <header>
-        <a href="/"><img src="img/logo.png" alt=""></a>
-    </header>
+    <header><%@ include file="../header.jsp"%></header>
     <%@ include file="../nav.jsp"%>
     <div class="heading"></div>
     <div class="row">
@@ -28,20 +26,25 @@
                     <p>${movie.country}</p>
                     <p>${movie.description}</p>
 
+                    <div class="col-md-2"><p class="bg-danger">
+                        <c:forEach var="i" begin="1" end="${rating}">
+                            &#9733;
+                        </c:forEach>
+                    </p></div>
+
                     <div class="table-responsive">
-                        <table class="table table-striped">
+                        <table class="table table-hover">
+                            <thead style="background: #eee">
+
                             <tr>
-                            <th><p>Актёр:</p></th>
-                            <th><p>Роль в фильме:</p></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                        </tr>
+                                <td>- Актёр -</td>
+                                <td>- Роль -</td>
+                            </tr>
+                            </thead>
 
                             <c:forEach var="movieMembers" items="${requestScope.movieMembers}">
                                 <tr>
-                                    <th><p>${movieMembers.firstName} ${movieMembers.lastName}</p></th>
+                                    <th><p><a href="${pageContext.request.contextPath}/member-details?id=${movieMembers.id}">${movieMembers.firstName} ${movieMembers.lastName}</a></p></th>
                                     <th><p>${movieMembers.role}</p></th>
                                 </tr>
                             </c:forEach>

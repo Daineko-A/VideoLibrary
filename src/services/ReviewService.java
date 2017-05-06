@@ -38,11 +38,14 @@ public class ReviewService {
         long raiting = 0;
         List<Review> reviews = showAllReview(idMovie).get();
 
-        for (Review review: reviews){
-            raiting += review.getStars();
+        if (!reviews.isEmpty()){
+            for (Review review: reviews){
+                raiting += review.getStars();
+            }
+
+            raiting = raiting / reviews.size();
         }
 
-        raiting = raiting / reviews.size();
 
         return raiting;
     }

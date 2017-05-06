@@ -46,7 +46,7 @@ public class MovieService {
         return MovieDao.getInstance().findMovieByYear(year);
     }
 
-    public void findFilmMember(String namePart){
-
+    public Optional<List<Movie>> getMovieByMemberId(long memberId){
+        return MovieDao.getInstance().getMovieByMemberId(memberId);
     }
 }

@@ -44,4 +44,8 @@ public class MovieMemberService {
     public Optional<List<MovieMember>> getMovieMembersByMovieId(long movieId){
         return MovieMemberDao.getInstance().getMovieMembersByMovieId(movieId);
     }
+
+    public Optional<MovieMember> getMovieMemberById(long id){
+        return MovieMemberDao.getInstance().getMovieMemberById(id);
+    }
 }

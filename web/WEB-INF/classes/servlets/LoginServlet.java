@@ -12,10 +12,10 @@ import java.io.IOException;
 import java.util.Optional;
 
 /**
- * Created by PloSkiY on 30.04.2017.
+ * Created by Alexandr on 06.05.2017.
  */
 @WebServlet("/login")
-public class Login extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,6 +38,8 @@ public class Login extends HttpServlet {
         req.getSession().setAttribute("userName", optionalUser.get().getName());
         resp.sendRedirect("/index");
 
+//        UserService.getInstance().newUser(new User(req.getParameter("loginreg"), req.getParameter("passreg"), req.getParameter("email")));
+//        getServletContext().getRequestDispatcher("/WEB-INF/jsp/users/login").forward(req, resp);
 
     }
 }

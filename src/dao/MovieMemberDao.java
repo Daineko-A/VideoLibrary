@@ -1,6 +1,7 @@
 package dao;
 
 import entitys.ConnectionManager;
+import entitys.Movie;
 import entitys.MovieMember;
 
 import java.sql.*;
@@ -66,26 +67,6 @@ public class MovieMemberDao {
         return Optional.empty();
     }
 
-//    public Optional<List<MovieMember>> getAllMemberByMovieId(long movieId){
-//        try(Connection connection = ConnectionManager.getConnection()){
-//            try(PreparedStatement preparedStatement = connection.prepareStatement(
-//                    "SELECT members.id members.first_name members.last_name members.birthday FROM members " +
-//                            "LEFT JOIN movies_members_roles ON ")){
-//
-//                ResultSet resultSet = preparedStatement.executeQuery();
-//                ArrayList<MovieMember> movieMembersList = new ArrayList<MovieMember>();
-//                while (resultSet.next()){
-//                    movieMembersList.add(new MovieMember(resultSet.getLong("id"), resultSet.getString("first_name"),
-//                            resultSet.getString("last_name"), resultSet.getDate("birthday").toLocalDate() ));
-//                }
-//                return Optional.of(movieMembersList);
-//            }
-//        } catch (SQLException e){
-//            e.printStackTrace();
-//        }
-//        return Optional.empty();
-//    }
-
     public long getRoleIdByName(String role){
         try(Connection connection = ConnectionManager.getConnection()){
             try(PreparedStatement preparedStatement = connection.prepareStatement(
@@ -140,5 +121,23 @@ public class MovieMemberDao {
         }
         return Optional.empty();
     }
+
+    public Optional<MovieMember> getMovieMemberById(long id){
+        try(Connection connection = ConnectionManager.getConnection()){
+            try(PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM members WHERE id = ?;")){
+                preparedStatement.setLong(1, id);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()){
+                    return Optional.of(new MovieMember(id, resultSet.getString("first_name"),
+                            resultSet.getString("last_name"), resultSet.getDate("birthday").toLocalDate()));
+                }
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return Optional.empty();
+    }
+
+
 
 }

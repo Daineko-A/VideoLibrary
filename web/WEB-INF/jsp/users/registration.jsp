@@ -20,16 +20,16 @@
                     <div class="container">
                     </div>
                     <div class="form-group">
-                        <label for="login">Логин</label>
-                        <input id="login" type="text" name="login" class="form-control">
+                        <label for="loginreg">Логин</label>
+                        <input id="loginreg" type="text" name="loginreg" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input id="email" type="email" name="email" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="pass">Пароль</label>
-                        <input id="pass" type="password" name="pass" class="form-control">
+                        <label for="passreg">Пароль</label>
+                        <input id="passreg" type="password" name="passreg" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-default">Зарегестрироватся</button>
                 </form>

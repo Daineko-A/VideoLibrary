@@ -217,4 +217,26 @@ public class MovieDao {
 
     }
 
+    public Optional<List<Movie>> getMovieByMemberId(long memberId){
+        try(Connection connection = ConnectionManager.getConnection()){
+            try(PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT movies.id, movies.title, roles.role, genre.genre FROM movies\n" +
+                            "LEFT JOIN movies_members_roles ON movies.id = movies_members_roles.movie_id\n" +
+                            "LEFT JOIN genre ON genre.id = movies.genre_id\n" +
+                            "LEFT JOIN roles ON movies_members_roles.role_id = roles.id\n" +
+                            "WHERE movies_members_roles.member_id = ?;")){
+                preparedStatement.setLong(1, memberId);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                ArrayList<Movie> moviesList = new ArrayList<Movie>();
+                while (resultSet.next()){
+                    moviesList.add(new Movie(resultSet.getInt("movies.id"), resultSet.getString("movies.title"),
+                            resultSet.getString("genre.genre")));
+                }
+                return Optional.of(moviesList);
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return Optional.empty();
+    }
 }
