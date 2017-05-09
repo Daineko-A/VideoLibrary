@@ -22,9 +22,6 @@
             ${movie.title}
 
             <form method="post" action="${pageContext.request.contextPath}/add-member-to-movie">
-                <%--<div class="container">--%>
-                <%--</div>--%>
-
                 <div class="form-group">
                     <select name="dropdownChoiceMovie">
                         <c:forEach var="movies" items="${requestScope.movies}">
@@ -49,8 +46,6 @@
             </form>
         </section>
     </div>
-
-
 </div>
 <footer><%@ include file="../footer.jsp"%></footer>
 

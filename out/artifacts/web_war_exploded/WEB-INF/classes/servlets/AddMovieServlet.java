@@ -29,10 +29,16 @@ public class AddMovieServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        MovieService.getInstance().addMovie(new Movie(req.getParameter("title"),
-                        LocalDate.parse(req.getParameter("releaseDate"), DateTimeFormatter.ofPattern("yyyy-MM-dd")), req.getParameter("description")),
-                            req.getParameter("genre"), req.getParameter("country"));
-        getServletContext().getRequestDispatcher("/WEB-INF/jsp/movie/add-member-to-movie.jsp").forward(req, resp);
+        if(!req.getParameter("title").equals("") || !req.getParameter("releaseDate").equals("") || !req.getParameter("description").equals("") ||
+                !req.getParameter("genre").equals("") || !req.getParameter("country").equals("")){
+            MovieService.getInstance().addMovie(new Movie(req.getParameter("title"),
+                            LocalDate.parse(req.getParameter("releaseDate"), DateTimeFormatter.ofPattern("yyyy-MM-dd")), req.getParameter("description")),
+                    req.getParameter("genre"), req.getParameter("country"));
+//            resp.sendRedirect("/add-member-to-movie");
+        }
+
+
+        getServletContext().getRequestDispatcher("/WEB-INF/jsp/movie/add-new-movie.jsp").forward(req, resp);
 //        resp.sendRedirect("/add-member-to-movie");
     }
 }

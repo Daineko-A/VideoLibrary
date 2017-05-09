@@ -8,8 +8,8 @@
 
         <form action="${pageContext.request.contextPath}/language" method="get">
             <select name="language" onchange="submit()">
-                <option value="ru_RU" ${sessionScope.currentLanguage eq 'ru_RU' ? 'selected' : ''}>Русский</option>
                 <option value="en_US" ${sessionScope.currentLanguage eq 'en_US' ? 'selected' : ''}>English</option>
+                <option value="ru_RU" ${sessionScope.currentLanguage eq 'ru_RU' ? 'selected' : ''}>Русский</option>
             </select>
         </form>
 

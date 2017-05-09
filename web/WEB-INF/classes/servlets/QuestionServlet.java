@@ -14,6 +14,9 @@ import java.io.IOException;
 public class QuestionServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if(req.getSession().getAttribute("userRole").equals("admin")){
+            req.setAttribute("role", 1);
+        }
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/questions.jsp").forward(req, resp);
     }
 }

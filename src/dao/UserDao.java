@@ -127,14 +127,4 @@ public class UserDao {
         }
         return null;
     }
-
-//    public Optional<User> autorization(String Login, String pass){
-//        try(Connection connection = ConnectionManager.getConnection()){
-//            try(PreparedStatement preparedStatement = connection.prepareStatement(""))
-//        }catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return Optional.empty();
-//    }
-
 }

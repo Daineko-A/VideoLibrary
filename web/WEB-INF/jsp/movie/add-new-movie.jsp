@@ -39,14 +39,8 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Описание</label>
-                    <%--<input id="description" type="text" name="description" class="form-control" rows="3">--%>
                     <textarea id="description" type="text" name="description" class="form-control" rows="3"></textarea>
                 </div>
-                <%--<div class="form-group">--%>
-                    <%--<label for="exampleInputFile">File input</label>--%>
-                    <%--<input type="file" id="exampleInputFile" name="exampleInputFile">--%>
-                    <%--&lt;%&ndash;<p class="help-block">Example block-level help text here.</p>&ndash;%&gt;--%>
-                <%--</div>--%>
                 <button type="submit" class="btn btn-default">Добавить фильм</button>
             </form>
         </section>

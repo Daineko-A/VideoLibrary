@@ -13,12 +13,8 @@
     <div class="heading"></div>
     <div class="col-md-6 col-md-offset-3">
         <aside class="col-md-6 col-md-offset-3"></aside>
-
         <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
         <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
-        
-        
-
     </div>
 </div>
 <footer><%@ include file="footer.jsp"%></footer>

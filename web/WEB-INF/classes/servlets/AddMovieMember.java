@@ -28,8 +28,10 @@ public class AddMovieMember extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        MovieMemberService.getInstance().addMovieMember(new MovieMember(req.getParameter("firstName"), req.getParameter("lastName"),
-                LocalDate.parse(req.getParameter("dateOfBirth"), DateTimeFormatter.ofPattern("yyyy-MM-dd"))));
+        if(!req.getParameter("firstName").equals("") || !req.getParameter("lastName").equals("") || !req.getParameter("dateOfBirth").equals("")){
+            MovieMemberService.getInstance().addMovieMember(new MovieMember(req.getParameter("firstName"), req.getParameter("lastName"),
+                    LocalDate.parse(req.getParameter("dateOfBirth"), DateTimeFormatter.ofPattern("yyyy-MM-dd"))));
+        }
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/movie/add-movie-member.jsp").forward(req, resp);
     }
 }

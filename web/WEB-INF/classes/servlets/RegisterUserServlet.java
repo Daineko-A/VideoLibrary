@@ -25,7 +25,10 @@ public class RegisterUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserService.getInstance().newUser(new User(req.getParameter("loginreg"), req.getParameter("passreg"), req.getParameter("email")));
+        if (!req.getParameter("loginreg").equals("") || !req.getParameter("passreg").equals("") || !req.getParameter("email").equals("")){
+            UserService.getInstance().newUser(new User(req.getParameter("loginreg"), req.getParameter("passreg"), req.getParameter("email")));
+        }
+               
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/users/login.jsp").forward(req, resp);
     }
 }
