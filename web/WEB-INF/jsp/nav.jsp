@@ -14,7 +14,7 @@
             <li><a href="/add-movie">Добавить фильм</a></li>
             <li><a href="/add-movie-member">Добавить актёра</a></li>
             <li><a href="/add-member-to-movie">Добавить актёров</a></li>
-            <%--<li><a href="/users">Пользователи</a></li>--%>
+            <li><a href="/users">Пользователи</a></li>
         </c:if>
 
     </ul>

@@ -45,12 +45,10 @@ public class UserDao {
         return Optional.empty();
     }
 
-    public Optional<List<User>> getAllUser(int startRow, int limit){
+    public Optional<List<User>> getAllUser(){
         try(Connection connection = ConnectionManager.getConnection()){
             try(PreparedStatement preparedStatement = connection.prepareStatement(
-                    "SELECT * FROM user ORDER BY name LIMIT ?, ?")){
-                preparedStatement.setInt(1, startRow);
-                preparedStatement.setInt(2, limit);
+                    "SELECT * FROM user")){
                 ResultSet resultSet = preparedStatement.executeQuery();
                 ArrayList<User> usersList = new ArrayList<User>();
                 while (resultSet.next()){
@@ -113,6 +111,24 @@ public class UserDao {
         return Optional.empty();
     }
 
+    public boolean changeUserRole(long userId, long roleId){
+        try(Connection connection = ConnectionManager.getConnection()){
+            try(PreparedStatement preparedStatement = connection.prepareStatement("UPDATE user SET user_role_id = ? WHERE id = ?", Statement.RETURN_GENERATED_KEYS)){
+                preparedStatement.setLong(1, roleId);
+                preparedStatement.setLong(2, userId);
+                preparedStatement.executeUpdate();
+                ResultSet resultSet = preparedStatement.getGeneratedKeys();
+                if(resultSet.next()){
+                    return true;
+                }
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
     public String getRoleById(long id){
         try(Connection connection = ConnectionManager.getConnection()){
             try(PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM user_role WHERE id = ?")){
@@ -126,5 +142,37 @@ public class UserDao {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public long getRoleIdByName(String role){
+        try(Connection connection = ConnectionManager.getConnection()){
+            try(PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM user_role WHERE role = ?")){
+                preparedStatement.setString(1, role);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                if(resultSet.next()){
+                    return resultSet.getLong("id");
+                }
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public Optional<List<String>> getAllRole(){
+        try(Connection connection = ConnectionManager.getConnection()){
+            try(PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM user_role")){
+                ResultSet resultSet = preparedStatement.executeQuery();
+                List<String> roles = new ArrayList<>();
+                while(resultSet.next()){
+                    roles.add(resultSet.getString("role"));
+                }
+
+                return Optional.of(roles);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return Optional.empty();
     }
 }

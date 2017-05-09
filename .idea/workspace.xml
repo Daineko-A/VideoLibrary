@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56b087e8-c8a9-45aa-bbce-9d274e872e4b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Demo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/adminnav.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/UsersServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/users/users.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Demo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/jsp/adminnav.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/jsp/users/userlist.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VideoLibrary/Demo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/users/userlist.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMemberToMovieServlet.java" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMemberToMovieServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieMember.java" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieMember.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieServlet.java" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/QuestionServlet.java" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/QuestionServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/RegisterUserServlet.java" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlets/RegisterUserServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/header.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/language-bar.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/language-bar.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/UserService.java" afterPath="$PROJECT_DIR$/src/services/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/filter/AdminFilter.java" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/filter/AdminFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-member-to-movie.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-member-to-movie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-new-movie.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-new-movie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/movie/member-details.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/movie/member-details.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/nav.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/nav.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/questions.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/questions.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/reports.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/reports.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,101 +42,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovieMemberDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/MovieMemberDao.java">
+      <file leaf-file-name="AddMemberToMovieServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMemberToMovieServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1770">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="284">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="38" selection-end-column="114" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="52" column="80" lean-forward="false" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
               <folding>
-                <marker date="1494330538752" expanded="true" signature="976:1046" ph="INSERT INTO members... " />
-                <marker date="1494330538752" expanded="true" signature="1955:2014" ph="SELECT * FRO... members" />
-                <marker date="1494330538752" expanded="true" signature="1955:2015" ph="SELECT * FRO... members" />
-                <marker date="1494330538752" expanded="true" signature="2662:2683" ph="SELECT * FRO... members" />
-                <marker date="1494330538752" expanded="true" signature="3543:3577" ph="SELECT * FRO... roles" />
-                <marker date="1494330538752" expanded="true" signature="4149:4184" ph="INSERT INTO roles... " />
-                <marker date="1494330538752" expanded="true" signature="4874:5254" ph="SELECT membe... members" />
-                <marker date="1494330538752" expanded="true" signature="6224:6258" ph="SELECT * FRO... members" />
-                <marker date="1494330538752" expanded="true" signature="7011:7091" ph="INSERT INTO movies_members_roles... " />
+                <element signature="imports" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#1009#1010#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1445#1446#0" expanded="true" />
+                <element signature="e#1511#1512#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1617#1618#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReviewDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/ReviewDao.java">
+      <file leaf-file-name="UsersServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/UsersServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-532">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="476">
+              <caret line="28" column="147" lean-forward="false" selection-start-line="28" selection-start-column="147" selection-end-line="28" selection-end-column="147" />
               <folding>
-                <marker date="1493796821000" expanded="true" signature="949:988" ph="SELECT * FRO... review" />
-                <marker date="1493796821000" expanded="true" signature="2041:2131" ph="INSERT INTO review... " />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
+      <file leaf-file-name="AdminFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/filter/AdminFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
-              <folding>
-                <marker date="1494347974033" expanded="true" signature="820:890" ph="INSERT INTO user... " />
-                <marker date="1494347974033" expanded="true" signature="1728:1771" ph="SELECT * FRO... user" />
-                <marker date="1494347974033" expanded="true" signature="2688:2719" ph="SELECT * FRO... user" />
-                <marker date="1494347974033" expanded="true" signature="3371:3404" ph="SELECT * FRO... user" />
-                <marker date="1494347974033" expanded="true" signature="4048:4094" ph="SELECT * FRO... user" />
-                <marker date="1494347974033" expanded="true" signature="4793:4829" ph="SELECT * FRO... user_role" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/entitys/ConnectionManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entitys/Movie.java">
+      <file leaf-file-name="LoginFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/filter/LoginFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1739">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieMember.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entitys/MovieMember.java">
+      <file leaf-file-name="users.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/users.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1229">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Review.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entitys/Review.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1076">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entitys/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1263">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="493">
+              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -149,7 +123,7 @@
       <file leaf-file-name="MovieDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/MovieDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3439">
+            <state relative-caret-position="17">
               <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <marker date="1494180705000" expanded="true" signature="967:1180" ph="SELECT movie... movies" />
@@ -164,6 +138,46 @@
                 <marker date="1494180705000" expanded="true" signature="8923:8959" ph="INSERT INTO genre... " />
                 <marker date="1494180705000" expanded="true" signature="9717:10142" ph="SELECT movie... movies" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="113" column="60" lean-forward="true" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="60" />
+              <folding>
+                <marker date="1494350574536" expanded="true" signature="820:890" ph="INSERT INTO user... " />
+                <marker date="1494350574536" expanded="true" signature="1705:1723" ph="SELECT * FRO... user" />
+                <marker date="1494350574536" expanded="true" signature="2533:2564" ph="SELECT * FRO... user" />
+                <marker date="1494350574536" expanded="true" signature="3216:3249" ph="SELECT * FRO... user" />
+                <marker date="1494350574536" expanded="true" signature="3893:3939" ph="SELECT * FRO... user" />
+                <marker date="1494350574536" expanded="true" signature="4659:4704" ph="UPDATE user " />
+                <marker date="1494350574536" expanded="true" signature="5381:5417" ph="SELECT * FRO... user_role" />
+                <marker date="1494350574536" expanded="true" signature="5975:6013" ph="SELECT * FRO... user_role" />
+                <marker date="1494350574536" expanded="true" signature="6570:6593" ph="SELECT * FRO... user_role" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/IndexServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -203,13 +217,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/entitys/User.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/login.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/Login.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/Logout.java" />
         <option value="$PROJECT_DIR$/src/dao/ReviewDao.java" />
         <option value="$PROJECT_DIR$/src/entitys/Review.java" />
-        <option value="$PROJECT_DIR$/src/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/entitys/MovieMember.java" />
         <option value="$PROJECT_DIR$/src/services/ReviewService.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/movie/movie-member-details.jsp" />
@@ -228,7 +239,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/MovieDetailsServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/MemberDetailsServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/FindFilmServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/classes/filter/AdminFilter.java" />
         <option value="$PROJECT_DIR$/src/dao/MovieMemberDao.java" />
         <option value="$PROJECT_DIR$/src/Demo.java" />
         <option value="$PROJECT_DIR$/src/services/MovieMemberService.java" />
@@ -244,16 +254,20 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/reports.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/questions.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/nav.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/language-bar.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/header.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/adminnav.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-member-to-movie.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-new-movie.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/movie/member-details.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMemberToMovieServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-member-to-movie.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/nav.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/classes/filter/AdminFilter.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/users/users.jsp" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/services/UserService.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/classes/servlets/UsersServlet.java" />
       </list>
     </option>
   </component>
@@ -509,6 +523,10 @@
               <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -535,6 +553,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1162,12 +1184,12 @@
       <workItem from="1494267919933" duration="7823000" />
       <workItem from="1494307176191" duration="595000" />
       <workItem from="1494308964506" duration="12752000" />
-      <workItem from="1494333067815" duration="12560000" />
+      <workItem from="1494333067815" duration="15251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270647000" />
+    <option name="totallyTimeSpent" value="273338000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1201,9 +1223,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.609447" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35785952" sideWeight="0.49266502" order="2" side_tool="false" content_ui="tabs" x="22" y="362" width="1636" height="286" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35785952" sideWeight="0.49266502" order="2" side_tool="false" content_ui="tabs" x="22" y="362" width="1636" height="286" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19349681" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19349681" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1717604" sideWeight="0.50687283" order="7" side_tool="true" content_ui="tabs" />
@@ -1295,25 +1317,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/services/MovieMemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/UserlistServlet.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="147" column="17" lean-forward="false" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/translations.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1329,22 +1332,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/filter/AdminFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/filter/LoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1394,14 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/nav.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/language-bar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1414,14 +1393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1450,14 +1421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/userlist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-311">
@@ -1470,14 +1433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-member-to-movie.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1522,22 +1477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMemberToMovieServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -1550,14 +1489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1628,26 +1559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/MovieDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3439">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1494180705000" expanded="true" signature="967:1180" ph="SELECT movie... movies" />
-            <marker date="1494180705000" expanded="true" signature="2076:2419" ph="SELECT movie... movies" />
-            <marker date="1494180705000" expanded="true" signature="3334:3432" ph="INSERT INTO movies... " />
-            <marker date="1494180705000" expanded="true" signature="4515:4548" ph="SELECT * FRO... movies" />
-            <marker date="1494180705000" expanded="true" signature="5210:5249" ph="SELECT * FRO... movies" />
-            <marker date="1494180705000" expanded="true" signature="6058:6104" ph="SELECT * FRO... movies" />
-            <marker date="1494180705000" expanded="true" signature="6970:7009" ph="SELECT * FRO... country" />
-            <marker date="1494180705000" expanded="true" signature="7590:7630" ph="INSERT INTO country... " />
-            <marker date="1494180705000" expanded="true" signature="8313:8348" ph="SELECT * FRO... genre" />
-            <marker date="1494180705000" expanded="true" signature="8923:8959" ph="INSERT INTO genre... " />
-            <marker date="1494180705000" expanded="true" signature="9717:10142" ph="SELECT movie... movies" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/MovieMemberDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1770">
@@ -1677,21 +1588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
-          <folding>
-            <marker date="1494347974033" expanded="true" signature="820:890" ph="INSERT INTO user... " />
-            <marker date="1494347974033" expanded="true" signature="1728:1771" ph="SELECT * FRO... user" />
-            <marker date="1494347974033" expanded="true" signature="2688:2719" ph="SELECT * FRO... user" />
-            <marker date="1494347974033" expanded="true" signature="3371:3404" ph="SELECT * FRO... user" />
-            <marker date="1494347974033" expanded="true" signature="4048:4094" ph="SELECT * FRO... user" />
-            <marker date="1494347974033" expanded="true" signature="4793:4829" ph="SELECT * FRO... user_role" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entitys/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-209">
@@ -1716,6 +1612,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="36" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMovieMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/userlist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entitys/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/entitys/Review.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1076">
@@ -1724,19 +1652,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entitys/User.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/movie/add-member-to-movie.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1263">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Demo.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/nav.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/AddMemberToMovieServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="38" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/filter/LoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="36" column="34" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="36" selection-end-column="34" />
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/filter/AdminFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/IndexServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/MovieDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <marker date="1494180705000" expanded="true" signature="967:1180" ph="SELECT movie... movies" />
+            <marker date="1494180705000" expanded="true" signature="2076:2419" ph="SELECT movie... movies" />
+            <marker date="1494180705000" expanded="true" signature="3334:3432" ph="INSERT INTO movies... " />
+            <marker date="1494180705000" expanded="true" signature="4515:4548" ph="SELECT * FRO... movies" />
+            <marker date="1494180705000" expanded="true" signature="5210:5249" ph="SELECT * FRO... movies" />
+            <marker date="1494180705000" expanded="true" signature="6058:6104" ph="SELECT * FRO... movies" />
+            <marker date="1494180705000" expanded="true" signature="6970:7009" ph="SELECT * FRO... country" />
+            <marker date="1494180705000" expanded="true" signature="7590:7630" ph="INSERT INTO country... " />
+            <marker date="1494180705000" expanded="true" signature="8313:8348" ph="SELECT * FRO... genre" />
+            <marker date="1494180705000" expanded="true" signature="8923:8959" ph="INSERT INTO genre... " />
+            <marker date="1494180705000" expanded="true" signature="9717:10142" ph="SELECT movie... movies" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/users/users.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="113" column="60" lean-forward="true" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="60" />
+          <folding>
+            <marker date="1494350574536" expanded="true" signature="820:890" ph="INSERT INTO user... " />
+            <marker date="1494350574536" expanded="true" signature="1705:1723" ph="SELECT * FRO... user" />
+            <marker date="1494350574536" expanded="true" signature="2533:2564" ph="SELECT * FRO... user" />
+            <marker date="1494350574536" expanded="true" signature="3216:3249" ph="SELECT * FRO... user" />
+            <marker date="1494350574536" expanded="true" signature="3893:3939" ph="SELECT * FRO... user" />
+            <marker date="1494350574536" expanded="true" signature="4659:4704" ph="UPDATE user " />
+            <marker date="1494350574536" expanded="true" signature="5381:5417" ph="SELECT * FRO... user_role" />
+            <marker date="1494350574536" expanded="true" signature="5975:6013" ph="SELECT * FRO... user_role" />
+            <marker date="1494350574536" expanded="true" signature="6570:6593" ph="SELECT * FRO... user_role" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="52" column="80" lean-forward="false" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1445#1446#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/servlets/UsersServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="147" lean-forward="false" selection-start-line="28" selection-start-column="147" selection-end-line="28" selection-end-column="147" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

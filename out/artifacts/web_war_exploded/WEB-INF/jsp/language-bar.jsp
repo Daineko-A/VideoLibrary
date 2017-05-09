@@ -13,8 +13,5 @@
             </select>
         </form>
 
-        <%--<a href="${pageContext.request.contextPath}/language?language=en_US">English</a>--%>
-        <%--<a href="${pageContext.request.contextPath}/language?language=ru_RU">Русский</a>--%>
-
     </div>
 </div>

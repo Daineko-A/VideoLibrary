@@ -10,7 +10,8 @@ import java.io.IOException;
         "/users",
         "/add-movie",
         "/add-movie-member",
-        "/add-member-to-movie"
+        "/add-member-to-movie",
+        "/users"
 })
 public class AdminFilter implements Filter{
 

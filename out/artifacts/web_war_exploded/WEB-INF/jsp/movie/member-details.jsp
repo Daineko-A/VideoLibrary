@@ -28,13 +28,11 @@
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead style="background: #eee">
-
                             <tr>
                                 <td>- Актёр -</td>
                                 <td>- Роль -</td>
                             </tr>
                             </thead>
-
                             <c:forEach var="memberFilm" items="${requestScope.memberFilm}">
                                 <tr>
                                     <th><p><a href="${pageContext.request.contextPath}/movie-details?id=${memberFilm.id}">${memberFilm.title}</a></p></th>
@@ -43,12 +41,8 @@
                             </c:forEach>
                         </table>
                     </div>
-
-
-                    <%--</table>--%>
                 </div>
             </div>
-    </div>
         </section>
 </div>
 </div>

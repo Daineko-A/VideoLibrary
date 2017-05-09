@@ -37,8 +37,8 @@ public class UserService {
         return UserDao.getInstance().getUserByName(name);
     }
 
-    public Optional<List<User>> getAllUser(int start, int end){
-        return UserDao.getInstance().getAllUser(start, end);
+    public Optional<List<User>> getAllUser(){
+        return UserDao.getInstance().getAllUser();
     }
 
     public Optional<User> getUserById(Long id){
@@ -49,14 +49,15 @@ public class UserService {
         return UserDao.getInstance().getUser(login, pass);
     }
 
-//    public Optional<User> autorization(String Login, String pass){
-//        return UserDao.getInstance().autorization(Login, pass);
-//    }
-
-
-    public void findUser(String namePart){
-
+    public boolean changeUserRole(long userId, String role){
+        return UserDao.getInstance().changeUserRole(userId, getRoleIdByName(role));
     }
 
+    public long getRoleIdByName(String role){
+        return UserDao.getInstance().getRoleIdByName(role);
+    }
 
+    public Optional<List<String>> getAllRole(){
+        return UserDao.getInstance().getAllRole();
+    }
 }

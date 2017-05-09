@@ -19,8 +19,6 @@
         <br>
 
         <img src="./img/q.jpg">
-
-
     </div>
 </div>
 <footer><%@ include file="footer.jsp"%></footer>

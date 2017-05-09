@@ -19,28 +19,24 @@
         <aside class="col-md-1"></aside>
         <section class="col-md-5">
 
-            <form method="post" action="${pageContext.request.contextPath}/add-member-to-movie">
+            <form method="post" action="${pageContext.request.contextPath}/users">
                 <div class="form-group">
-                    <select name="dropdownChoiceMovie">
-                        <c:forEach var="movies" items="${requestScope.movies}">
-                            <option value="${movies.id}">${movies.title}</option>
+                    <select name="dropdownChoiceUser">
+                        <c:forEach var="users" items="${requestScope.users}">
+                            <option value="${users.id}">${users.name}</option>
                         </c:forEach>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <select multiple rows="10" name="dropdownChoiceMembers">
-                    <c:forEach var="movieMembers" items="${requestScope.movieMembers}">
-                    <option value="${movieMembers.id}">${movieMembers.firstName} ${movieMembers.lastName}</option>
-                    </c:forEach>
+                    <select multiple rows="10" name="dropdownChoiceRole">
+                        <c:forEach var="role" items="${requestScope.roles}">
+                            <option value="${role}">${role}</option>
+                        </c:forEach>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="role">Роль</label>
-                    <input id="role" type="text" name="role" class="form-control">
-                </div>
 
-                <button type="submit" class="btn btn-default">Добавить актёра</button>
+                <button type="submit" class="btn btn-default">Изменить права пользователя</button>
             </form>
         </section>
     </div>
