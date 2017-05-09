@@ -16,7 +16,7 @@ CREATE TABLE movies (id INT AUTO_INCREMENT, title VARCHAR(60) UNIQUE NOT NULL, d
 CREATE TABLE roles (id INT AUTO_INCREMENT, role VARCHAR(45) UNIQUE NOT NULL, PRIMARY KEY(id));
 CREATE TABLE members (id INT AUTO_INCREMENT, first_name VARCHAR(60) NOT NULL, last_name VARCHAR(60) NOT NULL, birthday DATE NOT NULL, PRIMARY KEY(id));
 CREATE TABLE movies_members_roles (movie_id INT NOT NULL, member_id INT NOT NULL, role_id INT NOT NULL,
-											FOREIGN KEY(movie_id) REFERENCES movies(id), FOREIGN KEY(member_id) REFERENCES members(id), FOREIGN KEY(role_id) REFERENCES roles(id));
+											FOREIGN KEY(movie_id) REFERENCES movies(id), FOREIGN KEY(member_id) REFERENCES members(id), FOREIGN KEY(role_id) REFERENCES roles(id), PRIMARY KEY(movie_id, member_id, role_id));
 
 /*Create review*/
 CREATE TABLE review (id INT AUTO_INCREMENT, text VARCHAR(1000) NOT NULL, date DATETIME NOT NULL, stars INT NOT NULL, user_id  INT NOT NULL, movie_id INT NOT NULL,
@@ -59,8 +59,34 @@ INSERT INTO members (first_name, last_name, birthday) VALUES ('Евгений', 
 INSERT INTO members (first_name, last_name, birthday) VALUES ('Константин', 'Хабенский', '1972-01-11');
 INSERT INTO members (first_name, last_name, birthday) VALUES ('Владимир', 'Ильин', '1946-11-16');
 
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Мэтт', 'Дэймон', '1980-11-29');
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Джессика', 'Джессика', '1980-01-11');
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Чиветель', 'Эджиофор', '1980-11-16');
+
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Мэттью', 'МакКонахи', '1980-11-29');
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Энн', 'Хэтэуэй', '1980-01-11');
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Маккензи', 'Фой', '1980-11-16');
+
 INSERT INTO roles (role) VALUES ('актер');
 
 INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (1, 1, 1);
 INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (1, 2, 1);
 INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (1, 3, 1);
+
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (2, 4, 1);
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (2, 5, 1);
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (2, 6, 1);
+
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (4, 4, 1);
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (4, 5, 1);
+
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (4, 7, 1);
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (4, 8, 1);
+INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (4, 9, 1);
+
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Майкл', 'Фассбендер', '1980-11-29');
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Кэтрин', 'Уотерстон', '1980-11-29');
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Билли', 'Крудап', '1980-11-29');
+INSERT INTO members (first_name, last_name, birthday) VALUES ('Дэнни', 'МакБрайд', '1980-11-29');
+
+

@@ -32,7 +32,7 @@ public class MovieMemberService {
         if(memberId == 0){
             movieMember = MovieMemberDao.getInstance().addMovieMember(movieMember).get();
         } else {
-            movieMember = getMovieMemberById(memberId).get();   
+            movieMember = getMovieMemberById(memberId).get();
         }
 
         return Optional.of(movieMember);

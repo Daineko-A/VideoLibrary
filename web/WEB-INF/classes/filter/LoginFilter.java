@@ -24,7 +24,9 @@ public class LoginFilter implements Filter {
         if(servletRequest instanceof HttpServletRequest){
             HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
             Object userLoggedIn = httpServletRequest.getSession().getAttribute("userLoggedIn");
-            if(userLoggedIn == null && !httpServletRequest.getRequestURI().contains("/login") && !httpServletRequest.getRequestURI().contains("/registration")){
+            if(userLoggedIn == null && !httpServletRequest.getRequestURI().contains("/login")
+                    && !httpServletRequest.getRequestURI().contains("/registration")
+                    && !httpServletRequest.getRequestURI().contains("/language")){
                 ((HttpServletResponse) servletResponse).sendRedirect("/login");
             } else {
                 filterChain.doFilter(servletRequest, servletResponse);
