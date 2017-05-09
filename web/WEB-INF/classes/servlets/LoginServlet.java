@@ -16,7 +16,6 @@ import java.util.Optional;
  */
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/users/login.jsp").forward(req, resp);
@@ -37,9 +36,5 @@ public class LoginServlet extends HttpServlet {
         req.getSession().setAttribute("userRole", optionalUser.get().getUserRole());
         req.getSession().setAttribute("userName", optionalUser.get().getName());
         resp.sendRedirect("/index");
-
-//        UserService.getInstance().newUser(new User(req.getParameter("loginreg"), req.getParameter("passreg"), req.getParameter("email")));
-//        getServletContext().getRequestDispatcher("/WEB-INF/jsp/users/login").forward(req, resp);
-
     }
 }

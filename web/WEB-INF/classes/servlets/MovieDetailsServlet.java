@@ -26,6 +26,9 @@ public class MovieDetailsServlet extends HttpServlet {
         req.setAttribute("review", ReviewService.getInstance().showAllReview(id).get());
         req.setAttribute("rating", ReviewService.getInstance().getRating(id));
         req.setAttribute("movieMembers", MovieMemberService.getInstance().getMovieMembersByMovieId(id).get());
+        if(req.getSession().getAttribute("userRole").equals("admin")){
+            req.setAttribute("role", 1);
+        }
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/movie/movie-details.jsp").forward(req, resp);
     }
 

@@ -56,6 +56,20 @@ public class Movie {
         this.country = country;
     }
 
+    public Movie(String title, String genre, LocalDate releaseDate, String country, String description) {
+        this.title = title;
+        this.genre = genre;
+        this.releaseDate = releaseDate;
+        this.country = country;
+        this.description = description;
+    }
+
+    public Movie(String title, LocalDate releaseDate, String description) {
+        this.title = title;
+        this.releaseDate = releaseDate;
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "Movie{" +

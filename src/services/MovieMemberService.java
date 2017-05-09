@@ -27,7 +27,15 @@ public class MovieMemberService {
     }
 
     public Optional<MovieMember> addMovieMember(MovieMember movieMember){
-        return MovieMemberDao.getInstance().addMovieMember(movieMember);
+        long memberId = MovieMemberDao.getInstance().getMemberByFullName(movieMember.getFirstName(), movieMember.getLastName());
+
+        if(memberId == 0){
+            movieMember = MovieMemberDao.getInstance().addMovieMember(movieMember).get();
+        } else {
+            movieMember = getMovieMemberById(memberId).get();   
+        }
+
+        return Optional.of(movieMember);
     }
 
     public Optional<List<MovieMember>> getAllMember(){
@@ -47,5 +55,16 @@ public class MovieMemberService {
 
     public Optional<MovieMember> getMovieMemberById(long id){
         return MovieMemberDao.getInstance().getMovieMemberById(id);
+    }
+
+    public boolean addMemberToMovie(String[] memberId, long movieId, String role){
+        boolean isAdd = false;
+        if (memberId.length != 0){
+            for (String strMemberId : memberId){
+                MovieMemberDao.getInstance().addMemberToMovie(Long.valueOf(strMemberId), movieId, addRole(role));
+            }
+            isAdd = true;
+        }
+        return isAdd;
     }
 }

@@ -25,7 +25,7 @@
                     <input id="lastName" type="text" name="lastName" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="dateOfBirth">Дата рождения</label>
+                    <label for="dateOfBirth">Дата рождения (yyyy-MM-dd)</label>
                     <input id="dateOfBirth" type="date" name="dateOfBirth" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-default">Добавить актёра</button>

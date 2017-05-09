@@ -20,6 +20,9 @@ public class AddMovieMember extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if(req.getSession().getAttribute("userRole").equals("admin")){
+            req.setAttribute("role", 1);
+        }
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/movie/add-movie-member.jsp").forward(req, resp);
     }
 

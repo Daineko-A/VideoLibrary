@@ -51,6 +51,14 @@
                         </table>
                     </div>
 
+                    <div>
+                        <%--<button type="button" class="btn btn-default btn-xs" href="${pageContext.request.contextPath}/getreport?id=${requestScope.movie.id}">--%>
+                            <%--Скачать описание фильма /button>--%>
+
+                        <a href="${pageContext.request.contextPath}/getreport?id=${requestScope.movie.id}">Скачать описание фильма</a>
+                    </div>
+
+
 
                     <br>
                     <br>

@@ -9,7 +9,8 @@ import java.io.IOException;
 @WebFilter({
         "/users",
         "/add-movie",
-        "/add-movie-member"
+        "/add-movie-member",
+        "/add-member-to-movie"
 })
 public class AdminFilter implements Filter{
 

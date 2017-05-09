@@ -7,34 +7,59 @@
     <%@ include file="styles-connect.jsp" %>
 </head>
 <body>
-    <div class="wrapper container">
-        <header><%@ include file="header.jsp"%></header>
-        <%@ include file="nav.jsp"%>
-        <div class="heading"></div>
-        <div class="row">
-            <aside class="col-md-7"></aside>
-            <section class="col-md-17">
-                <div class="container">
-                </div>
+<div class="wrapper container">
+    <header><%@ include file="header.jsp"%></header>
+    <nav class="navbar navbar-default"> <%@ include file="nav.jsp"%> </nav>
+    <div class="heading"></div>
 
-                <div class="team">
-                    <div class="row">
-                        <c:forEach var="movie" items="${requestScope.movies}">
-                            <div class="col col-md-2">
-                                <p><a href="${pageContext.request.contextPath}/movie-details?id=${movie.id}">
-                                    <img src="./img/posters/${movie.id}poster.jpg" alt="${movie.title}" class="thumbnail"></a></p>
-                                <div class="caption">
-                                    <h3>${movie.title}</h3>
-                                    <p>${movie.genre}</p>
-                                </div>
-                            </div>
-                        </c:forEach>
+    <div class="row">
+        <div class="col-xs-12">
+
+            <c:forEach var="movie" items="${requestScope.movies}">
+                <div class="col-md-3">
+                    <p><a href="${pageContext.request.contextPath}/movie-details?id=${movie.id}">
+                        <img src="./img/posters/${movie.id}poster.jpg" alt="${movie.title}" class="img-thumbnail" width="50%" height="auto"></a></p>
+                    <div class="caption">
+                        <h3>${movie.title}</h3>
+                        <p>${movie.genre}</p>
                     </div>
                 </div>
+            </c:forEach>
 
-            </section>
         </div>
     </div>
+
+
+
+    <%--<div class="wrapper container">--%>
+        <%--<header><%@ include file="header.jsp"%></header>--%>
+        <%--<%@ include file="nav.jsp"%>--%>
+        <%--<div class="heading"></div>--%>
+
+
+
+        <%--<div class="row">--%>
+            <%--<aside class="col-md-7"></aside>--%>
+            <%--&lt;%&ndash;<section class="col-md-17">&ndash;%&gt;--%>
+                    <%--<div class="col-md-12">--%>
+                        <%--<c:forEach var="movie" items="${requestScope.movies}">--%>
+                        <%--<div class="col-md-3">--%>
+                            <%--<p><a href="${pageContext.request.contextPath}/movie-details?id=${movie.id}">--%>
+                                <%--<img src="./img/posters/${movie.id}poster.jpg" alt="${movie.title}" class="img-thumbnail" width="50%" height="auto"></a></p>--%>
+                            <%--<div class="caption">--%>
+                                <%--<h3>${movie.title}</h3>--%>
+                                <%--<p>${movie.genre}</p>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                        <%--</c:forEach>--%>
+                    <%--</div>--%>
+
+            <%--&lt;%&ndash;</section>&ndash;%&gt;--%>
+        <%--</div>--%>
+    <%--</div>--%>
+
+
+
     <footer><%@ include file="footer.jsp"%></footer>
 </body>
 </html>

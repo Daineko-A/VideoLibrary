@@ -48,6 +48,22 @@ public class MovieMemberDao {
         return Optional.empty();
     }
 
+    public long getMemberByFullName(String firstName, String lastName){
+        try(Connection connection = ConnectionManager.getConnection()){
+            try(PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM members WHERE first_name = ? AND last_name = ?")){
+                preparedStatement.setString(1, firstName);
+                preparedStatement.setString(2, lastName);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()){
+                  return resultSet.getLong("id");
+                }
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public Optional<List<MovieMember>> getAllMember(){
         try(Connection connection = ConnectionManager.getConnection()){
             try(PreparedStatement preparedStatement = connection.prepareStatement(
@@ -138,6 +154,23 @@ public class MovieMemberDao {
         return Optional.empty();
     }
 
+    public boolean addMemberToMovie(long memberId, long movieId, long roleId){
+        try(Connection connection = ConnectionManager.getConnection()){
+            try(PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO movies_members_roles (movie_id, member_id, role_id) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS)){
+                preparedStatement.setLong(1, movieId);
+                preparedStatement.setLong(2, memberId);
+                preparedStatement.setLong(3, roleId);
+                preparedStatement.executeUpdate();
+                ResultSet resultSet = preparedStatement.getGeneratedKeys();
+                if(!resultSet.next()){
+                    return true;
+                }
+            }
+        }catch (SQLException e){
+            return false;
+        }
+        return false;
+    }
 
 
 }

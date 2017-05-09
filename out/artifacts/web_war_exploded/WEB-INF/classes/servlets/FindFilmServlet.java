@@ -13,13 +13,16 @@ import java.io.IOException;
  * Created by PloSkiY on 25.04.2017.
  */
 @WebServlet("/find-film")
-public class FindFilm extends HttpServlet {
+public class FindFilmServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("movies", MovieService.getInstance().findMovie(req.getParameter("namePart")).get());
         if (req.getParameter("year") != null){
             req.setAttribute("movies", MovieService.getInstance().findMovieByYear(Long.valueOf(req.getParameter("year"))).get());
+        }
+        if(req.getSession().getAttribute("userRole").equals("admin")){
+            req.setAttribute("role", 1);
         }
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/movie/find-film.jsp").forward(req, resp);
     }

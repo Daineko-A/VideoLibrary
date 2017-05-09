@@ -22,7 +22,19 @@ import java.util.Optional;
 public class Demo {
     public static void main(String[] args) {
 
-        System.out.println(MovieMemberDao.getInstance().getMovieMemberById(2).get());
+
+//        System.out.println( MovieMemberDao.getInstance().addMemberToMovie(13,7,1));
+        System.out.println(MovieMemberDao.getInstance().getMemberByFullName("Мэтт", "Дэймон"));
+
+//        MovieService.getInstance().addMovie(new Movie("Темная башня",
+//                        LocalDate.parse("2017-12-31", DateTimeFormatter.ofPattern("yyyy-MM-dd")), "Главный герой — стрелок Роланд Дискейн, отправившийся на поиски Темной Башни — оплота Вселенной — удерживающей все миры от хаоса и разрушения."),
+//                "Фантастика", "США");
+
+
+        //        Movie movie = MovieService.getInstance().details(1).get();
+//        String filename = "attachment; filename = 1" + movie.getId() + ".txt";
+//
+//        System.out.println(filename);
 
 
 //        LocalDate first = LocalDate.of(2020, 06, 25);

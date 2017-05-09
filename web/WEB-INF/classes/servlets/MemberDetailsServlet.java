@@ -21,6 +21,9 @@ public class MemberDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("member", MovieMemberService.getInstance().getMovieMemberById(Long.valueOf(req.getParameter("id"))).get());
         req.setAttribute("memberFilm", MovieService.getInstance().getMovieByMemberId(Long.valueOf(req.getParameter("id"))).get());
+        if(req.getSession().getAttribute("userRole").equals("admin")){
+            req.setAttribute("role", 1);
+        }
         getServletContext().getRequestDispatcher("/WEB-INF/jsp/movie/member-details.jsp").forward(req, resp);
     }
 

@@ -26,23 +26,27 @@
                     <input id="title" type="text" name="title" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="dateOfBirth">Дата выхода фильма</label>
-                    <input id="dateOfBirth" type="date" name="dateOfBirth" class="form-control">
+                    <label for="releaseDate">Дата выхода фильма (yyyy-MM-dd)</label>
+                    <input id="releaseDate" type="date" name="releaseDate" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="country">Страна</label>
                     <input id="country" type="text" name="country" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label for="genre">Жанр</label>
+                    <input id="genre" type="text" name="genre" class="form-control">
+                </div>
+                <div class="form-group">
                     <label for="description">Описание</label>
                     <%--<input id="description" type="text" name="description" class="form-control" rows="3">--%>
                     <textarea id="description" type="text" name="description" class="form-control" rows="3"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" id="exampleInputFile" name="exampleInputFile">
-                    <%--<p class="help-block">Example block-level help text here.</p>--%>
-                </div>
+                <%--<div class="form-group">--%>
+                    <%--<label for="exampleInputFile">File input</label>--%>
+                    <%--<input type="file" id="exampleInputFile" name="exampleInputFile">--%>
+                    <%--&lt;%&ndash;<p class="help-block">Example block-level help text here.</p>&ndash;%&gt;--%>
+                <%--</div>--%>
                 <button type="submit" class="btn btn-default">Добавить фильм</button>
             </form>
         </section>

@@ -5,6 +5,8 @@ import entitys.Movie;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -71,28 +73,28 @@ public class MovieDao {
         return Optional.empty();
     }
 
-    public Optional<Movie> addMovie(Movie movie){
-
-//        Переделать !
-
+    public Optional<Movie> addMovie(Movie movie, long genreId, long countryId){
         try(Connection connection = ConnectionManager.getConnection()){
             try(PreparedStatement preparedStatement = connection.prepareStatement(
-                    "INSERT INTO user (name, pass, email, user_role_id) VALUES (?, ?, ?, 2);", Statement.RETURN_GENERATED_KEYS)){
-
+                    "INSERT INTO movies (title, genre_id, release_date, country_id, description) VALUES (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS)){
+                preparedStatement.setString(1, movie.getTitle());
+                preparedStatement.setLong(2, genreId);
+                preparedStatement.setString(3, movie.getReleaseDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+                preparedStatement.setLong(4, countryId);
+                preparedStatement.setString(5, movie.getDescription());
                 preparedStatement.executeUpdate();
-                ResultSet genKeys = preparedStatement.getGeneratedKeys();
-                if(genKeys.next()){
+                ResultSet resultSet = preparedStatement.getGeneratedKeys();
+                if(resultSet.next()){
                     return Optional.of(movie);
                 }
             }
-        } catch (SQLException e) {
+        } catch (SQLException e){
             e.printStackTrace();
         }
-
-
-
         return Optional.empty();
     }
+
+    //movieMember.getDateOfBirth().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
 
     public Optional<Movie> getMovieById(long id){
         try(Connection connection = ConnectionManager.getConnection()){

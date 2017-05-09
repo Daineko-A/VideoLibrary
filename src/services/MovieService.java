@@ -49,4 +49,19 @@ public class MovieService {
     public Optional<List<Movie>> getMovieByMemberId(long memberId){
         return MovieDao.getInstance().getMovieByMemberId(memberId);
     }
+
+    public Optional<Movie> addMovie(Movie movie, String genre, String country){
+        long genreId = MovieDao.getInstance().getGenreIdByName(genre.trim());
+        long countryId = MovieDao.getInstance().getCountryIdByName(country.trim());
+
+        if(genreId == 0){
+            genreId = MovieDao.getInstance().addGenre(genre.trim());
+        }
+
+        if(countryId == 0){
+            countryId = MovieDao.getInstance().addCountry(country.trim());
+        }
+
+        return MovieDao.getInstance().addMovie(movie, genreId, countryId);
+    }
 }

@@ -9,9 +9,9 @@
         <li><a href="/find-film">Найти фильм</a></li>
         <li><a href="/add-movie">Добавить фильм</a></li>
         <li><a href="/add-movie-member">Добавить актёра</a></li>
-        <%--<li><a href="/Statistics">Статистика</a></li>--%>
-        <%--<li><a href="/reports">Отчеты</a></li>--%>
         <li><a href="/cabinet">Личный кабинет</a></li>
+    <%--<li><a href="/Statistics">Статистика</a></li>--%>
+    <%--<li><a href="/reports">Отчеты</a></li>--%>
 
 
     </ul>
