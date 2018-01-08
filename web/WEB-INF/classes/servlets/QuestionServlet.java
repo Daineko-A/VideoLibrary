@@ -7,11 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by PloSkiY on 06.05.2017.
- */
 @WebServlet("/questions")
 public class QuestionServlet extends HttpServlet{
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getSession().getAttribute("userRole").equals("admin")){
